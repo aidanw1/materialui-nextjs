@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import Header from "../src/ui/Header";
+import Footer from "../src/ui/Footer";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../src/theme";
 
@@ -21,12 +22,13 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>My page</title>
+        <title>Arc Development</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
         <Header value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
-        <Component {...pageProps} />
+        <Component {...pageProps} setSelectedIndex={setSelectedIndex} setValue={setValue} />
+        <Footer value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
       </ThemeProvider>
     </React.Fragment>
   );

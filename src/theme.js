@@ -1,33 +1,16 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
-// INLINE STYLES - see header component for example
-
-//import { makeStyles } from "@material-ui/styles";
-//const useStyles = makeStyles({ root: {} })
-//use makeStyles for inline styles and use classes = useStyles()
-
-// VARIABLES
 const arcBlue = "#0B72B9";
 const arcOrange = "#FFBA60";
 const arcGrey = "#868686";
 
-//pallette - way to manage colors used throughout the app
-//jss allows you to write all your styles at javascript objects
-//customization/default theme in material ui docs shows the default theme and
-//what you can overwrite
 export default createMuiTheme({
-  //palette/common for main site colors and primary/secondary
-  //specify typography font sizes and color using the variant tag throughout the app
-  //there is also a color prop
-
-  // <Typography variant="h3" color="secondary">
   palette: {
     common: {
       blue: arcBlue,
       orange: arcOrange,
     },
     primary: {
-      light: "#FFFFFF",
       main: arcBlue,
     },
     secondary: {
@@ -39,10 +22,8 @@ export default createMuiTheme({
       fontFamily: "Raleway",
       textTransform: "none",
       fontWeight: 700,
-      //material ui uses rems as default responsive unit throughout their theme - its connected to base font size material ui provides us
-      //1rem = 14px
+      color: "white",
       fontSize: "1rem",
-      //spaces between tabs
     },
     estimate: {
       fontFamily: "Pacifico",
@@ -50,7 +31,7 @@ export default createMuiTheme({
       textTransform: "none",
       color: "white",
     },
-    h2: {
+    h1: {
       fontFamily: "Raleway",
       fontWeight: 700,
       fontSize: "2.5rem",
@@ -68,49 +49,60 @@ export default createMuiTheme({
       color: arcBlue,
       fontWeight: 700,
     },
+    h6: {
+      fontWeight: 500,
+      fontFamily: "Raleway",
+      color: arcBlue,
+      lineHeight: 1,
+    },
     subtitle1: {
       fontSize: "1.25rem",
       fontWeight: 300,
       color: arcGrey,
     },
-    subTitle2: {
+    subtitle2: {
       color: "white",
-      fontSize: "1.25rem",
       fontWeight: 300,
-    },
-    learnButton: {
-      borderColor: arcBlue,
-      borderRadius: 50,
-      color: arcBlue,
-      borderWidth: 2,
-      textTransform: "none",
-      fontFamily: "Roboto",
-      fontWeight: "bold",
+      fontSize: "1.25rem",
     },
     body1: {
       fontSize: "1.25rem",
       color: arcGrey,
       fontWeight: 300,
     },
-    overrides: {
-      MuiInputLabel: {
-        root: {
-          color: arcBlue,
-          fontSize: "1rem",
-        },
+    caption: {
+      fontSize: "1rem",
+      fontWeight: 300,
+      color: arcGrey,
+    },
+    learnButton: {
+      borderColor: arcBlue,
+      borderWidth: 2,
+      textTransform: "none",
+      color: arcBlue,
+      borderRadius: 50,
+      fontFamily: "Roboto",
+      fontWeight: "bold",
+    },
+  },
+  overrides: {
+    MuiInputLabel: {
+      root: {
+        color: arcBlue,
+        fontSize: "1rem",
       },
-      MuiInput: {
-        root: {
-          color: arcGrey,
-          fontWeight: 300,
+    },
+    MuiInput: {
+      root: {
+        color: arcGrey,
+        fontWeight: 300,
+      },
+      underline: {
+        "&:before": {
+          borderBottom: `2px solid ${arcBlue}`,
         },
-        underline: {
-          "&:before": {
-            borderBottom: `2px solid ${arcBlue}`,
-          },
-          "&:hover:not($disabled):not($focused):not($error):before": {
-            borderBottom: `2px solid ${arcBlue}`,
-          },
+        "&:hover:not($disabled):not($focused):not($error):before": {
+          borderBottom: `2px solid ${arcBlue}`,
         },
       },
     },
