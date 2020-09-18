@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "../src/Link";
+import Head from "next/head";
 import { makeStyless, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
@@ -79,6 +80,13 @@ export default function CustomSoftware(props) {
   };
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">Custom Software Development & Design - Free Estimate</title>
+        <meta name="description" key="description" content="Cutting-edge custom software development with gorgeous designs from scratch - let us optimize your business, solving problems instead of creating new ones" />
+        <meta property="og:title" content="Bringing West Coast Technology to the Midwest | Custom Software Development" key="og:title" />
+        <meta property="og:url" content="arc.com/customsoftware" key="og:url" />
+        <link rel="canonical" key="canonical" href="arc.com/customsoftware" />
+      </Head>
       <Grid item container direction="row" justify={matchesMD ? "center" : undefined} className={classes.rowContainer} style={{ marginTop: matchesXS ? "1em" : "2em" }}>
         <Hidden mdDown>
           <Grid item className={classes.arrowContainer} style={{ marginRight: "1em", marginLeft: "-3.5em" }}>

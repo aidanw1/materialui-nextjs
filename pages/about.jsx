@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import CallToAction from "../src/ui/CallToAction";
-
+import Head from "next/head";
 import { Call } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -37,6 +37,13 @@ export default function About({ setValue }) {
 
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">About Us - History & Team | Arc Development</title>
+        <meta name="description" key="description" content="We provide the fastest, most modern, affordable, and aesthetic software design and development services in the MidWest. Get a free online estimate now." />
+        <meta property="og:title" content="Bringing West Coast Technology to the Midwest | About Us" key="og:title" />
+        <meta property="og:url" content="arc.com/about" key="og:url" />
+        <link rel="canonical" key="canonical" href="arc.com/about" />
+      </Head>
       <Grid item className={classes.rowContainer} style={{ marginTop: matchesMD ? "2em" : "1em" }}>
         <Typography variant="h2">About Us</Typography>
       </Grid>

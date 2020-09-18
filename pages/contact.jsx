@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import Link from "../src/Link";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -118,6 +119,13 @@ export default function Contact() {
   };
   return (
     <Grid container direction="row">
+      <Head>
+        <title key="title">Contact Us | Arc Development</title>
+        <meta name="description" key="description" content="Let us guide you through the custom software design and development process. Send us a message with any of your ideas or questions to get started" />
+        <meta property="og:title" content="Bringing West Coast Technology to the Midwest | Contact Us" key="og:title" />
+        <meta property="og:url" content="arc.com/contact" key="og:url" />
+        <link rel="canonical" key="canonical" href="arc.com/contact" />
+      </Head>
       <Grid item container direction="column" lg={4} xl={3} justify="center" alignItems="center" style={{ marginBottom: matchesMD ? "5em" : 0, marginTop: matchesSM ? "1em" : matchesMD ? "5em" : 0 }}>
         <Grid item>
           <Grid container direction="column">

@@ -23,6 +23,10 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "postbuild": "node scripts/sitemap.js",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+  },
+  "devDependencies": {
+    "fs-extra": "^9.0.1"
   }
 }

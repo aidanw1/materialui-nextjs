@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Lottie from "react-lottie";
 import Link from "../src/Link";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
@@ -51,6 +52,13 @@ export default function MobileApps(props) {
 
   return (
     <Grid containter direction="column">
+      <Head>
+        <title key="title">iOS/Android App Design & Development | Arc Development</title>
+        <meta name="description" key="description" content="Mobile Apps Made Easy | Our cutting-edge mobile app development process lets us build beautifully designed, carefully crafted apps for both iOS and Android." />
+        <meta property="og:title" content="Bringing West Coast Technology to the Midwest | iOS/Android Development" key="og:title" />
+        <meta property="og:url" content="arc.com/mobileapps" key="og:url" />
+        <link rel="canonical" key="canonical" href="arc.com/mobileapps" />
+      </Head>
       <Grid item container direction="row" justify={matchesMD ? "center" : undefined} className={classes.rowContainer} style={{ marginTop: matchesXS ? "1em" : "2em" }}>
         <Hidden mdDown>
           <Grid item className={classes.arrowContainer} style={{ marginRight: "1em", marginLeft: "-3.5em" }}>

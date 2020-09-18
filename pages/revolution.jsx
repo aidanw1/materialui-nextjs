@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -36,6 +37,13 @@ export default function Revolution() {
 
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">The Revolution - Cutting Edge Software | Arc Development</title>
+        <meta name="description" key="description" content="Visionary insights, coupled with cutting-edge technology, is a recipe for revolution. Get a free online estimate instantly." />
+        <meta property="og:title" content="Bringing West Coast Technology to the Midwest | The Revolution" key="og:title" />
+        <meta property="og:url" content="arc.com/revolution" key="og:url" />
+        <link rel="canonical" key="canonical" href="arc.com/revolution" />
+      </Head>
       <Grid item className={classes.rowContainer} style={{ marginTop: "2em" }}>
         <Typography align={matchesMD ? "center" : undefined} variant="h2" style={{ fontFamily: "Pacifico" }}>
           The Revolution
