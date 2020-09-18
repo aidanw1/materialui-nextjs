@@ -221,7 +221,7 @@ export default function LandingPage(props) {
             </Button>
           </Grid>
           <Grid item>
-            <LazyLoadImage className={classes.icon} alt="custom software icon" src="/assets/customSoftware.svg" />
+            <LazyLoadImage className={classes.icon} alt="custom software icon" src="/assets/customsoftware.svg" />
           </Grid>
         </Grid>
       </Grid>

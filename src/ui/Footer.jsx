@@ -157,7 +157,7 @@ export default function Footer(props) {
         </Grid>
       </Hidden>
 
-      <img alt="black decorative slash" src="/assets/footerAdornment.svg" className={classes.adornment} />
+      <img alt="black decorative slash" src="/assets/footeradornment.svg" className={classes.adornment} />
 
       <Grid container justify="flex-end" spacing={2} className={classes.socialContainer}>
         <Grid item component={"a"} href="https://www.facebook.com" rel="noopener noreferrer" target="_blank">
