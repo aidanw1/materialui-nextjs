@@ -120,7 +120,7 @@ export default function CustomSoftware(props) {
         <Hidden mdDown>
           <Grid item className={classes.arrowContainer}>
             <IconButton onClick={() => props.setSelectedInex(2)} component={Link} href="/mobileapps" style={{ backgroundColor: "transparent" }}>
-              <img src="/assets/forwardAssets.svg" alt="Forward to iOS/Android App Developmet Page" />
+              <img src="/assets/forwardArrow.svg" alt="Forward to iOS/Android App Developmet Page" />
             </IconButton>
           </Grid>
         </Hidden>
@@ -209,7 +209,7 @@ export default function CustomSoftware(props) {
       <Grid item container direction="row" style={{ marginTop: "20em", marginBottom: "20em" }} className={classes.rowContainer}>
         <Grid item container direction="column" alignItems="center">
           <Grid item>
-            <img src="/assets/roots.svg" alt="tree with roots extending out" height={matchesSM ? "300em" : "450em"} width={matchesSM ? "300em" : "450em"} />
+            <img src="/assets/root.svg" alt="tree with roots extending out" height={matchesSM ? "300em" : "450em"} width={matchesSM ? "300em" : "450em"} />
           </Grid>
           <Grid item className={classes.itemContainer}>
             <Typography variant="h4" align="center" gutterBottom>
